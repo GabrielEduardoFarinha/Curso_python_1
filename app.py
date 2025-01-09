@@ -1,11 +1,13 @@
-print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
+print('Python na Escola de Programação da Alura.\n')
 
+NOME = 'Gabriel'
+IDADE = '24'
 
-print('1. cadastrar restaurante')
-print('2. listar restaurantes')
-print('3. ativar restaurante')
-print('4. sair do cadastro\n')
+print(f'Meu nome é {NOME} e tenho {IDADE} anos de vida\n')
 
+print('\033[31m' + 'A' + '\033[0m')
+print('L')
+print('U')
+print('R')
+print('\033[31m' + 'A' + '\033[0m\n')
 
-opcao_escolhida = input('escolha uma opção: ')
-print(f'você escolhar a opção{opcao_escolhida}')
