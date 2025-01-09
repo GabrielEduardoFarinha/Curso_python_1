@@ -1,4 +1,4 @@
-"""
+
 # Exercícios de Python - Alura
 
 Este script contém a resolução de três exercícios propostos para praticar conceitos básicos de Python, incluindo saída de dados no terminal e manipulação de strings.
