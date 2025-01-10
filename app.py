@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ['sushi', 'lasanha']
+restaurantes = [{'nome':'Joe Marmitas', 'categoria':'popular', 'ativo': False},
+                {'nome':'Pizza da Serra', 'categoria':'pizzaria', 'ativo': True},
+                {'nome':'b-52', 'categoria':'hamburgueria', 'ativo': False}]
 
 def exibir_subtitulo(texto):
     os.system('cls')
@@ -34,7 +36,10 @@ def cadastrar_novo_restaurante():
 def listar_restaurantes():
     exibir_subtitulo('lista de restuarantes a baixo: ')
     for restaurante in restaurantes:
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        estado = restaurante['ativo']
+        print(f'- {nome_restaurante}|{categoria}|{estado}')
     voltar_ao_menu_inicial()
 
 def escolha_opcao():
