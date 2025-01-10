@@ -4,6 +4,20 @@ restaurantes = [{'nome':'Joe Marmitas', 'categoria':'popular', 'ativo': False},
                 {'nome':'Pizza da Serra', 'categoria':'pizzaria', 'ativo': True},
                 {'nome':'b-52', 'categoria':'hamburgueria', 'ativo': False}]
 
+def alteraçao_de_estado():
+    exibir_subtitulo('alterando estado do restaurante')
+    nome_restaurante = input('digite o nome do restaurante que deseja ativar ou desativar: ')
+    restaurante_econtrado = False
+    for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:
+            restaurante_econtrado = True
+            restaurante['ativo'] = not restaurante['ativo']
+            mensagem = f' o restaurante {nome_restaurante} foi ativado com sucesso' if restaurante['ativo'] else f'o restaurante {nome_restaurante} foi desativado com sucesso'
+            print(mensagem)
+    if not restaurante_econtrado:
+        print('o restaurante não foi encontrado')
+    voltar_ao_menu_inicial()
+
 def exibir_subtitulo(texto):
     os.system('cls')
     print(texto)
@@ -55,7 +69,7 @@ def escolha_opcao():
         elif opcao_escolhida == 2:
             listar_restaurantes()
         elif opcao_escolhida == 3:
-            print('ativar restaurante')
+            alteraçao_de_estado()
         elif opcao_escolhida == 4:
             finalizar_app()
         else:
